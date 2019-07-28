@@ -1,0 +1,129 @@
+TRIPDETAILS
+<html>
+ <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/3.1.3/js/bootstrap-datetimepicker.min.js"></script> -->
+    <script src="dateScript.js"></script>
+    </script>
+    <style>
+        #instant_book{
+            background-color:yellow;
+        }
+    </style>
+</head>
+<body>
+    <div id="header"></div>
+    <div class="container-fluid">
+        <div id="" class="row col-md-12">
+            <div class="col-md-4">
+                <div id="user_Info">
+                    <div>
+                        <img src="avatar1.jpg" style="height:40%">
+                        <h1 style="font-weight:bold;">Reddy</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <h1>Vizag To Khammam</h1>
+                 <div><span style="font-weight:bold; font-size: 20px">Travelling Date: 01/30/2019</span></div>
+                <div>
+                    <span style="font-weight:bold;font-size: 20px">Seats Available: </span>
+                    <img src="seat1.jpg" style="height:30px" title="Reddy">
+                    <img src="seat1.jpg" style="height:30px" title="Srinu">
+                    <img src="seat1.jpg" style="height:30px" title="Kranthi">
+                    <img src="seat1.jpg" style="height:30px">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <h1>Price</h1>
+                <h3>60$</h3>
+            </div>
+            <div class="col-md-2">
+                <div id="car_Info">
+                    <div>
+                        <img src="bmw.jpg" style="height:40%; width:90%">
+                        <h1>BMW X6 M</h1>
+                        <button type="button" class="btn btn-default" id="instant_book" data-toggle="modal" data-target="#myModal" style="font-size: 26px">Instant Booking</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal -->
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+             <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header" style="background-color:#FF8A33;">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Book your Trip</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-inline">
+                        <div class="form-group form-group-md">
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <span class="glyphicon glyphicon-user"></span>
+                                </div>
+                                <label for="firstName"></label>
+                                <input class="form-control" id="firstName" name="FirstName" type="text" placeholder="First Name"
+                                    required />
+                            </div>
+                        </div>
+                        <div class="form-group form-group-md">
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <span class="glyphicon glyphicon-user"></span>
+                                </div>
+                                <label for="lastName"></label>
+                                <input class="form-control" id="lastName" name="LastName" type="text" placeholder="Last Name"
+                                    required />
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="form-inline">
+                        <div class="form-group form-group-md">
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <span class="glyphicon glyphicon-envelope"></span>
+                                </div>
+                                <label for="email"></label>
+                                <input class="form-control" id="email" name="Email" type="text" placeholder="Email"
+                                    required />
+                            </div>
+                        </div>
+                        <div class="form-group form-group-md">
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <span class="glyphicon glyphicon-phone"></span>
+                                </div>
+                                <label for="phone"></label>
+                                <input class="form-control" id="phone" name="Phone" type="text" placeholder="Phone"
+                                    required />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-inline">
+                        <div class="form-group form-group-md">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Reserve Trip</button>
+                </div>
+            </div>
+         </div>
+    </div>
+    <script>        $(document).ready(function () {
+            document.getElementById("header").innerHTML = '<object type="text/html" data="header.html" style="width:100%;"></object>';
+         });
+    </script>
+</body>
+</html>
